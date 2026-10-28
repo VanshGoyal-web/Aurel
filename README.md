@@ -104,4 +104,3 @@ Relative `css/`, `js/`, and `assets/` paths work both on a repository subpath an
 
 Original public reference: https://aurel-timepieces-vansh.alighttide2048.chatgpt.site/
 
-Built as a portable static version for VS Code, GitHub, and GitHub Pages.
