@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#eee6da" />
+  <meta name="description" content="AUREL — an interactive watch brand concept. Discover six timepieces, explore a 360-degree design preview and find your fit." />
+  <title>AUREL — Time, beautifully kept.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to collection</a>
+  <div class="announcement"><span>A LITTLE LESS HURRY. A LITTLE MORE LIFE.</span><span>THE PREMIÈRE COLLECTION · 2026</span></div>
+  <header class="site-header" id="top">
+    <nav class="nav-left" aria-label="Main navigation">
+      <a href="#collection">The collection</a><a href="#philosophy">Our philosophy</a>
+    </nav>
+    <a class="wordmark" href="#top" aria-label="AUREL homepage"><strong>AUREL</strong><small>THE ART OF KEEPING TIME</small></a>
+    <nav class="nav-right" aria-label="Experience navigation"><a href="#atelier">Explore in 3D</a><a href="#fitting">Try it on</a><button type="button" class="bag-link" id="openBag" aria-label="Open bag">Bag <span class="bag-count" data-bag-count>0</span></button></nav>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden><a href="#collection">The collection</a><a href="#philosophy">Our philosophy</a><a href="#atelier">Explore in 3D</a><a href="#fitting">Try it on</a><button id="mobileBag" type="button">Your bag <span data-bag-count>0</span></button></nav>
+
+  <main>
+    <section class="hero" aria-label="AUREL luxury watch collection">
+      <div class="hero-photo" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p class="eyebrow hero-eyebrow">FOR THE MOMENTS THAT MATTER</p>
+        <h1>Time,<br><em>beautifully</em><br>kept.</h1>
+        <p class="hero-copy">Not just the hours.<br>The life you put into them.</p>
+        <a class="pill-button button-light" href="#collection">Discover your AUREL <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-bottom"><span>AN EVERYDAY OBJECT.<br>AN EXTRAORDINARY FEELING.</span><a href="#philosophy">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a><span>01 — PREMIÈRE<br>IVORY / CHOCOLATE</span></div>
+    </section>
+
+    <section class="philosophy section-pad" id="philosophy">
+      <div class="container two-column philosophy-grid"><div><p class="eyebrow">A MORE CONSIDERED KIND OF TIME</p><h2>Some things deserve<br>to be <em>taken slowly.</em></h2></div><div class="philosophy-aside"><p>The first coffee. The long way home. A conversation with no end in sight. AUREL is a reminder to make room for it all — with a watch that feels as good as the moment.</p><a class="text-link" href="#atelier">Meet your everyday companion <span>↗</span></a></div></div>
+    </section>
+
+    <section class="atelier-section section-pad" id="atelier">
+      <div class="container"><div class="section-heading heading-between"><div><p class="eyebrow">THE AUREL ATELIER / SIX TIMEPIECES</p><h2>Every angle.<br><em>Every detail.</em></h2></div><p class="section-intro">A study in proportion, texture and light.<br>Choose a timepiece, then explore its form.</p></div>
+        <div class="watch-selector" id="watchSelector" role="group" aria-label="Choose a watch for 360 degree preview"></div>
+        <div class="viewer-grid">
+          <div class="viewer-surface" id="viewerSurface" tabindex="0" aria-label="Interactive watch viewer. Drag left or right to rotate; use arrow keys to rotate.">
+            <div class="viewer-orbit viewer-orbit-outer"></div><div class="viewer-orbit viewer-orbit-inner"></div>
+            <div class="viewer-topline"><span>DRAG TO ROTATE 360°</span><span class="tiny-cross">✳</span></div>
+            <div class="watch-3d-position"><div class="watch-3d" id="watch3d"><div class="watch-front"><img id="viewerImage" src="assets/images/premiere-ivory.webp" alt="Première Ivory watch front view" draggable="false" /></div><div class="watch-rear"><div class="back-circle"><span>AUREL</span><small>TIME, BEAUTIFULLY KEPT</small><i>✳</i></div></div></div></div>
+            <div class="dial-loupe" id="dialLoupe" aria-hidden="true"><img id="dialImage" src="assets/images/premiere-ivory.webp" alt="" /></div>
+            <div class="layer-graphic" id="layerGraphic" aria-hidden="true"><span class="layer-ring layer-1"></span><span class="layer-ring layer-2"></span><span class="layer-ring layer-3"></span><span class="layer-marker">CRYSTAL / CASE / MOVEMENT</span></div>
+            <div class="viewer-bottomline"><span>DIMENSIONALLY PROPORTIONED DESIGN STUDIES</span><output id="angleOutput">000° / 360°</output></div>
+          </div>
+          <div class="viewer-panel"><p class="eyebrow" id="viewerNumber">01 / 06</p><h3 id="viewerTitle">Première Ivory</h3><p id="viewerDescription" class="viewer-description">Polished steel. Warm ivory. Chocolate leather.</p>
+            <div class="spec-grid"><div><span class="spec-label">CASE SIZE</span><strong id="viewerSize">36 / 40 MM</strong></div><div><span class="spec-label">STRAP</span><strong id="viewerStrap">CHOCOLATE LEATHER</strong></div></div>
+            <div class="mode-buttons"><button class="mode-button" id="autoRotate" type="button" aria-pressed="false">Rotate 360° <span>↻</span></button><button class="mode-button" id="inspectDial" type="button" aria-pressed="false">Inspect dial <span>+</span></button><button class="mode-button" id="revealLayers" type="button" aria-pressed="false">Reveal layers <span>+</span></button><button class="mode-button" id="resetViewer" type="button">Reset <span>↺</span></button></div>
+            <div class="mode-description" id="modeDescription" aria-live="polite">Drag the watch left or right to explore its form, or try the controls above.</div>
+            <button class="full-button" id="discoverWatch" type="button">Discover this watch <span>↗</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div>MAKE TIME FOR THE MOMENTS ✳ THAT MAKE YOU. &nbsp; MAKE TIME FOR THE MOMENTS ✳ THAT MAKE YOU. &nbsp; MAKE TIME FOR THE MOMENTS ✳ THAT MAKE YOU.</div></div>
+
+    <section class="collection section-pad" id="collection"><div class="container"><div class="section-heading heading-between collection-heading"><div><p class="eyebrow">THE PREMIÈRE COLLECTION</p><h2>Yours, for<br><em>the everyday.</em></h2></div><div class="collection-aside"><p>SIX EXPRESSIONS.<br>ONE POINT OF VIEW.</p><span>All timepieces <b>06</b></span></div></div>
+      <div class="collection-toolbar"><div class="filter-buttons" role="group" aria-label="Filter watches"><button class="filter active" data-filter="all" aria-pressed="true">All watches</button><button class="filter" data-filter="leather" aria-pressed="false">Leather</button><button class="filter" data-filter="steel" aria-pressed="false">Steel</button><button class="filter" data-filter="atelier" aria-pressed="false">Atelier editions</button></div><div class="saved-counter">Saved <span id="favoritesCount">0</span></div></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="collection-footer"><p><b>6 TIMEPIECES</b><br>One collection. Your own way of wearing it.</p><button class="text-link" type="button" id="openFinder">A little help choosing? <span>↗</span></button></div>
+    </div></section>
+
+    <section class="fitting-section section-pad" id="fitting"><div class="container"><div class="section-heading heading-between"><div><p class="eyebrow">THE PERSONAL FITTING</p><h2>A little more <em>you.</em></h2></div><p class="section-intro">A familiar wrist. A different perspective.<br>Find the proportions that feel right.</p></div>
+      <div class="fitting-grid"><div class="fitting-preview"><div class="fitting-heading"><span id="fittingWatchName">PREMIÈRE IVORY · 40 MM</span><button id="turnWrist" class="subtle-button" type="button" aria-pressed="false">Turn wrist ↻</button></div>
+          <div class="hand-stage" id="handStage"><div class="hand-underlay"></div><img id="handPhoto" class="hand-photo" src="assets/images/hand-medium.webp" alt="Natural medium-tone hand seen from above" draggable="false" /><img id="wornWatch" class="worn-watch" src="assets/images/premiere-ivory.webp" alt="Première Ivory watch fitted on wrist" draggable="false" /><div class="hand-light-sheen"></div></div>
+          <div class="fitting-caption"><span>RELATIVE PROPORTIONS</span><span id="fittingMetrics">17 cm wrist · 40 mm case</span></div>
+        </div><div class="fitting-controls"><label class="field-label" for="fittingWatch">01 / YOUR TIMEPIECE</label><select id="fittingWatch" class="large-select" aria-label="Choose watch for fitting"></select>
+          <p class="field-label tone-label">02 / YOUR SKIN TONE</p><div class="tone-picker" role="group" aria-label="Choose skin tone"><button class="tone" data-tone="light" title="Light skin tone" aria-label="Light skin tone" aria-pressed="false"><span></span></button><button class="tone selected" data-tone="medium" title="Medium skin tone" aria-label="Medium skin tone" aria-pressed="true"><span></span></button><button class="tone" data-tone="tan" title="Tan skin tone" aria-label="Tan skin tone" aria-pressed="false"><span></span></button><button class="tone" data-tone="deep" title="Deep skin tone" aria-label="Deep skin tone" aria-pressed="false"><span></span></button><b id="skinToneName">Medium</b></div>
+          <div class="range-label"><label class="field-label" for="wristRange">03 / WRIST CIRCUMFERENCE</label><strong id="wristValue">17 cm</strong></div><input id="wristRange" class="wrist-range" type="range" min="14" max="21" value="17" step="0.5" /><div class="range-ends"><span>14 cm</span><span>21 cm</span></div>
+          <p class="field-label size-label">04 / CASE PREFERENCE</p><div class="size-buttons" role="group" aria-label="Choose case size"><button data-size="36" type="button">Small <small>36 mm</small></button><button class="selected" data-size="40" type="button">Medium <small>40 mm</small></button><button data-size="42" type="button">Large <small>42 mm</small></button></div>
+          <p class="fit-summary" id="fitSummary">40 mm on a 17 cm wrist.</p><div class="fit-actions"><button class="full-button" id="exploreSize" type="button">Explore this size <span>↗</span></button><button class="text-link" id="resetFitting" type="button">Reset fitting ↺</button></div>
+          <details class="measure-guide"><summary>How to measure your wrist <span>+</span></summary><p>Wrap a soft measuring tape snugly around your wrist, just behind the wrist bone. Enter that circumference above. You can also use a strip of paper and measure it with a ruler.</p></details>
+          <p class="fine-print">A photographic proportion preview, not an actual-size scan. Wrist shape, strap adjustment and comfort vary; use this to compare sizes.</p>
+        </div></div></div></section>
+
+    <section class="detail-split" aria-label="A closer look at AUREL"><div class="detail-photo"><img src="assets/images/detail-ivory.webp" loading="lazy" alt="Close-up watch with ivory dial and chocolate leather" /></div><div class="detail-text"><p class="eyebrow">PREMIÈRE Nº 01 · A CLOSER LOOK</p><h2>Good things<br><em>take time.</em></h2><p>Made for the moments that stay with you long after the day is done.</p><a href="#collection" class="text-link">Explore the details <span>↗</span></a></div></section>
+
+    <section class="details-section section-pad"><div class="container details-grid"><div><p class="eyebrow">QUIETLY DISTINCTIVE</p><h2>The difference<br>is in <em>the details.</em></h2><p class="details-lead">A curve that catches the light. A dial with room to breathe. A familiar weight on your wrist. Nothing loud. Nothing overlooked.</p></div><div class="detail-points"><article><span>01</span><div><h3>A face with character</h3><p>Understated markers, warm tones and a sunray finish give the Première Ivory its quietly expressive face.</p></div></article><article><span>02</span><div><h3>A balance of textures</h3><p>Polished metal meets the rich grain of leather. Choose warm chocolate, deep black or a brushed steel bracelet.</p></div></article><article><span>03</span><div><h3>A personal fit</h3><p>Explore 36 mm and 40 mm case options in the preview, and find the proportions that feel most like you.</p></div></article></div></div></section>
+
+    <section class="quote-section"><div class="container"><p class="eyebrow">A NOTE FROM AUREL</p><h2>Life isn't measured<br>in minutes.<br><em>It's made of moments.</em></h2><a href="#collection" class="pill-button button-light">Make time for yours <span>↗</span></a><div class="quote-foot">THE ART OF KEEPING TIME — AUREL</div></div></section>
+
+    <section class="faq-section section-pad"><div class="container faq-grid"><div><p class="eyebrow">A FEW THINGS TO KNOW</p><h2>A good place<br><em>to begin.</em></h2><button class="text-link" type="button" id="faqFinder">Find your watch <span>↗</span></button></div><div class="faq-list"><details><summary>Which case size is right for me?<span>+</span></summary><p>A 36 mm case gives a more understated, classic presence; 40 mm feels a little bolder. Wrist shape and personal preference matter more than a single rule. Atelier editions have their own proportions.</p></details><details><summary>Leather or a steel bracelet?<span>+</span></summary><p>Leather brings warmth and a softer, dressier feel. Steel has a clean, versatile presence. Try our watch finder for a recommendation based on your style.</p></details><details><summary>How should I look after a watch?<span>+</span></summary><p>Wipe the case with a soft, dry cloth, keep leather away from prolonged moisture, and avoid strong magnets and impacts. Follow the actual manufacturer's care and water-resistance guidance.</p></details><details><summary>Can I purchase these timepieces?<span>+</span></summary><p>AUREL is a fictional brand and this is an interactive storefront concept. Products, specifications and prices are illustrative. The bag is a demonstration; payments and real orders are not enabled.</p></details></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div><a href="#top" class="footer-brand">AUREL</a><p>Time, beautifully kept.</p></div><div class="footer-links"><a href="#collection">The collection</a><a href="#atelier">Watch studio</a><a href="#fitting">Personal fitting</a><button type="button" id="aboutConcept">About this concept ↗</button></div></div><div class="container footer-bottom"><span>© 2026 AUREL · A WATCH BRAND CONCEPT</span><span>ORIGINAL IMAGERY. IMAGINED TIMEPIECES.</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+
+  <div class="overlay" id="panelOverlay" hidden></div>
+  <aside class="bag-drawer" id="bagDrawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" aria-hidden="true"><div class="drawer-top"><div><p class="eyebrow">GOOD CHOICES TAKE TIME</p><h2 id="bagTitle">Your bag <span data-bag-count>0</span></h2></div><button type="button" class="close-icon" id="closeBag" aria-label="Close bag">×</button></div><div class="bag-items" id="bagItems"></div><div class="drawer-bottom" id="bagBottom"></div></aside>
+  <div class="modal" id="finderModal" role="dialog" aria-modal="true" aria-labelledby="finderTitle" aria-hidden="true"><button class="close-icon modal-close" data-close-modal type="button" aria-label="Close watch finder">×</button><p class="eyebrow">THE AUREL WATCH FINDER</p><h2 id="finderTitle">What feels<br><em>like you?</em></h2><p>Choose the mood you're drawn to. We'll find your match.</p><div class="finder-choices" id="finderChoices"><button data-finder="classic">Quiet & classic <span>↗</span></button><button data-finder="bold">Modern & bold <span>↗</span></button><button data-finder="sport">Clean & versatile <span>↗</span></button><button data-finder="artistic">Distinctly different <span>↗</span></button></div><div id="finderResult" hidden></div></div>
+  <div class="modal" id="conceptModal" role="dialog" aria-modal="true" aria-labelledby="conceptTitle" aria-hidden="true"><button class="close-icon modal-close" data-close-modal type="button" aria-label="Close concept information">×</button><p class="eyebrow">A CREATIVE EXPLORATION</p><h2 id="conceptTitle">Meet <em>AUREL.</em></h2><p>AUREL is a fictional watch brand brought to life through an editorial storefront. All watches, specifications and prices are illustrative. Imagery comes from the original AUREL creative project. Favorites and bag selections are saved only in your browser. No payments, orders or personal information are collected.</p><button class="full-button" data-close-modal type="button">Back to exploring <span>↗</span></button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
